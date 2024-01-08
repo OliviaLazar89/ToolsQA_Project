@@ -141,6 +141,7 @@ public class PracticeFormPage extends BasePage {
     public void uploadPicture(){
         File file = new File("src/test/resources/New Rich Text Document.RTF");
         uploadPicture.sendKeys(file.getAbsolutePath());
+        LoggerUtility.info("The user uploads specific picture from file");
     }
 
     public void fillAddress(String addressValue) {

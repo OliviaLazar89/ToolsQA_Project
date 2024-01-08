@@ -26,7 +26,7 @@ public class ShareData {
     }
 
 
-    public void Clear(){
+    public void clear(){
 
         driver.quit();
         LoggerUtility.info("The browser was closed with success");

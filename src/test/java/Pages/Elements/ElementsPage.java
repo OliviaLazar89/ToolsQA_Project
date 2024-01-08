@@ -1,5 +1,6 @@
 package Pages.Elements;
 
+import Logger.LoggerUtility;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ElementsPage extends BasePage {
 
     public ElementsPage(WebDriver driver) {
+
         super(driver);
     }
 //am comentat ce e mai jos pt ca folosim mai sus mostenire cu BasePage, unde avem driverul
@@ -25,5 +27,6 @@ public class ElementsPage extends BasePage {
 
     public void clickWebTables(){
         webTables.click();
+        LoggerUtility.info("The user clicks on webTables button");
     }
 }

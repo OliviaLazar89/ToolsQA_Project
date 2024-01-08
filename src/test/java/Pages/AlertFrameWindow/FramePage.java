@@ -22,20 +22,25 @@ public class FramePage extends BasePage {
 
 
     public void interractFirstIFrame() {
-        driver.switchTo().frame("frame1"); //se muta cu focusul pe acest iframe
+        frameMethods.switchToFrame("frame1");
+        //driver.switchTo().frame("frame1"); //se muta cu focusul pe acest iframe
         LoggerUtility.info("The user switches on specific frame");
 
         System.out.println(frameText.getText());
         LoggerUtility.info("The user prints the frame text value");
 
-        driver.switchTo().defaultContent();  // te intoarce cu focusul pe pagina mare
+        frameMethods.switchMainFrame();
+        //driver.switchTo().defaultContent();  // te intoarce cu focusul pe pagina mare
         LoggerUtility.info("The user switches back on primary frame");
     }
 
     public void interractSecondIFrame(){
-
-        driver.switchTo().frame("frame2");
+        frameMethods.switchToFrame("frame2");
+        //driver.switchTo().frame("frame2");
         LoggerUtility.info("The user switches on the second frame");
+
+        frameMethods.switchMainFrame();
+        LoggerUtility.info("The user switches back to primary frame");
 
         System.out.println(frameText.getText());
         LoggerUtility.info("The user prints the frame text value");
