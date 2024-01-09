@@ -1,5 +1,6 @@
 package Pages.Forms;
 
+import Logger.LoggerUtility;
 import ObjectData.FormTableObject;
 import Pages.BasePage;
 import org.openqa.selenium.*;
@@ -96,77 +97,93 @@ public class PracticeFormPage extends BasePage {
 
     public void fillFirstName(String firstNameValue) {
     elementMethods.fillElement(firstName,firstNameValue);
+        LoggerUtility.info("The user fills FirstName with value :" + firstNameValue);
 //        firstName.sendKeys(firstNameValue);
     }
 
     public void fillLastName(String lastNameValue) {
         elementMethods.fillElement(lastName,lastNameValue);
+        LoggerUtility.info("The user fills LastName with value :" + lastNameValue);
  //       //lastName.sendKeys(lastNameValue);
     }
 
     public void fillEmailAddress(String emailAddressValue) {
         elementMethods.fillElement(emailAddress, emailAddressValue);
+        LoggerUtility.info("The user fills emailAddress with value :" + emailAddressValue);
  //       emailAddress.sendKeys(emailAddressValue);
     }
 
     public void fillGender() {
         elementMethods.clickElement(gender);
+        LoggerUtility.info("The user clicks on gender " + gender);
 //        gender.click();
     }
 
     public void fillMobile(String mobileValue) {
         elementMethods.fillElement(mobile, mobileValue);
+        LoggerUtility.info("The user fills mobile with value :" + mobileValue);
  //       mobile.sendKeys(mobileValue);
     }
 
     public void fillSubjects(String subjectsValue) {
         elementMethods.fillElement(subjects,subjectsValue,Keys.ENTER);
+        LoggerUtility.info("The user fills subjects with value :" + subjectsValue);
 //        subjects.sendKeys(subjectsValue);
 //        subjects.sendKeys(Keys.ENTER);
     }
 
     public void fillReading() {
         elementMethods.clickElement(reading);
+        LoggerUtility.info("The user clicks on:" + reading);
 //        reading.click();
     }
 
     public void uploadPicture(){
         File file = new File("src/test/resources/New Rich Text Document.RTF");
         uploadPicture.sendKeys(file.getAbsolutePath());
+        LoggerUtility.info("The user uploads specific picture from file");
     }
 
     public void fillAddress(String addressValue) {
         elementMethods.fillElement(address, addressValue);
+        LoggerUtility.info("The user fills address with value :" + addressValue);
  //       address.sendKeys(addressValue);
     }
 
     public void fillState(String stateValue) {
         elementMethods.scrollByPixels(0,450);
+        LoggerUtility.info("The user scrolls down the page");
 //        JavascriptExecutor jse = (JavascriptExecutor) driver;
 //        jse.executeScript("window.scrollBy(0,450)", "");
        elementMethods.clickJSElement(state);
+        LoggerUtility.info("The user clicks on state ");
  //       state.click();
        elementMethods.fillElement(selectState, stateValue, Keys.ENTER);
+        LoggerUtility.info("The user selects state :" + stateValue);
 //        selectState.sendKeys(stateValue);
 //        selectState.sendKeys(Keys.ENTER);
     }
 
     public void fillCity(String cityValue) {
         elementMethods.clickJSElement(city);
+        LoggerUtility.info("The user clicks on city");
  //       city.click();
         elementMethods.fillElement(selectCity, cityValue, Keys.ENTER);
+        LoggerUtility.info("The user selects city :" + cityValue);
 //        selectCity.sendKeys(cityValue);
 //        selectCity.sendKeys(Keys.ENTER);
     }
 
     public void fillSubmit() {
         elementMethods.clickJSElement(submitButton);
+        LoggerUtility.info("The user clicks on submit button");
 //        JavascriptExecutor jse = (JavascriptExecutor) driver;
 //        jse.executeScript("arguments[0].click();", submitButton);
     }
 
     public void clickClose() {
         elementMethods.fillElement(closeButton, Keys.ENTER);
+        LoggerUtility.info("The user clicks on close button");
  //        closeButton.sendKeys(Keys.ENTER);
     }
 

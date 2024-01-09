@@ -1,5 +1,6 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,12 +24,15 @@ public class HomePage extends BasePage {
 
     public void clickAlertFrameWindow(){
         alertsFrameWindow.click();
+        LoggerUtility.info("The user clicks on alertsFrameWindow button");
     }
     public void clickForms(){
         forms.click();
+        LoggerUtility.info("The user clicks on forms button");
     }
 
     public void clickElements(){
         elements.click();
+        LoggerUtility.info("The user clicks on elements button");
     }
 }

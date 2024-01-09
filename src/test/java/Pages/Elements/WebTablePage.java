@@ -1,5 +1,6 @@
 package Pages.Elements;
 
+import Logger.LoggerUtility;
 import ObjectData.WebTableObject;
 import Pages.BasePage;
 import org.openqa.selenium.By;
@@ -52,20 +53,28 @@ public class WebTablePage extends BasePage {
         Integer actualTableSize = actualEntries.size(); //luam dimensiunea listei
 
         elementMethods.clickElement(AddButton);
+        LoggerUtility.info("The user clicks on the add button");
         // AddButton.click();
         elementMethods.fillElement(FirstNameElement, webTableObject.getFirstNameValue());
+        LoggerUtility.info("The user fills firstname field");
      //   FirstNameElement.sendKeys(FirstNameValue);
         elementMethods.fillElement(LastNameElement, webTableObject.getLastNameValue());
+        LoggerUtility.info("The user fills lastname field");
     //    LastNameElement.sendKeys(LastNameValue);
         elementMethods.fillElement(EmailElement, webTableObject.getEmailValue());
+        LoggerUtility.info("The user fills email field");
     //    EmailElement.sendKeys(EmailValue);
         elementMethods.fillElement(AgeElement,webTableObject.getAgeValue());
+        LoggerUtility.info("The user fills age field");
      //   AgeElement.sendKeys(AgeValue);
         elementMethods.fillElement(SalaryElement, webTableObject.getSalaryValue());
+        LoggerUtility.info("The user fills salary field");
      //   SalaryElement.sendKeys(SalaryValue);
         elementMethods.fillElement(Department, webTableObject.getDepartmentValue());
+        LoggerUtility.info("The user fills department field");
      //   Department.sendKeys(DepartmentValue);
         elementMethods.clickElement(SubmitButton);
+        LoggerUtility.info("The user clicks on submit button");
      //   SubmitButton.click();
 
   // Metoda care adauga entry-uri noi, apoi vine metoda de mai jos care valideaza ca 3+1=4.

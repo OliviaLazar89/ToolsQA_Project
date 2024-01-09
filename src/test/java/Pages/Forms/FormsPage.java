@@ -1,4 +1,5 @@
 package Pages.Forms;
+import Logger.LoggerUtility;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +20,7 @@ public class FormsPage extends BasePage {
 
 
     public void clickPracticeForm (){
-
         practiceForms.click();
+        LoggerUtility.info("The user clicks on practiceForms button");
     }
 }
