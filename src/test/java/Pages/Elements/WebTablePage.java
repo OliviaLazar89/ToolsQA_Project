@@ -52,7 +52,7 @@ public class WebTablePage extends BasePage {
 
         Integer actualTableSize = actualEntries.size(); //luam dimensiunea listei
 
-        elementMethods.clickElement(AddButton);
+        elementMethods.clickJSElement(AddButton);
         LoggerUtility.info("The user clicks on the add button");
         // AddButton.click();
         elementMethods.fillElement(FirstNameElement, webTableObject.getFirstNameValue());
