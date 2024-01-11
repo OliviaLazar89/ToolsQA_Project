@@ -35,12 +35,15 @@ public class FramePage extends BasePage {
     }
 
     public void interractSecondIFrame(){
+
+        elementMethods.scrollByPixels(0,350);
+
         frameMethods.switchToFrame("frame2");
         //driver.switchTo().frame("frame2");
         LoggerUtility.info("The user switches on the second frame");
 
-        frameMethods.switchMainFrame();
-        LoggerUtility.info("The user switches back to primary frame");
+//        frameMethods.switchMainFrame();
+//        LoggerUtility.info("The user switches back to primary frame");
 
         System.out.println(frameText.getText());
         LoggerUtility.info("The user prints the frame text value");
