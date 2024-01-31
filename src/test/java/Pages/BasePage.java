@@ -9,12 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
-    public WindowMethods windowMethods;
-    public AlertMethods alertMethods;
-    public FrameMethods frameMethods;
-    public ElementMethods elementMethods;
+    protected WindowMethods windowMethods;
+    protected AlertMethods alertMethods;
+    protected FrameMethods frameMethods;
+    protected ElementMethods elementMethods;
 
 
     public BasePage(WebDriver driver) {
