@@ -18,7 +18,7 @@ public class Hooks extends ShareData{ // va avea ca rol sa aduca impreuna toate 
         testName = this.getClass().getSimpleName();
         PropertyUtility propertyUtility = new PropertyUtility(testName);
         testData = propertyUtility.getAllData();  //logica care ar trebui sa ne scoata dinamic datele
-        LoggerUtility.startTestCase(testName);  //
+        LoggerUtility.startTestCase(testName);
         Setup();  // apare metoda asta pt ca avem extends sharedata
     }
 

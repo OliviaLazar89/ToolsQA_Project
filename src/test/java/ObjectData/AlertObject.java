@@ -7,10 +7,12 @@ public class AlertObject {
     private String promptAlertValue;
 
     public String getPromptAlertValue() {
+
         return promptAlertValue;
     }
 
     public void setPromptAlertValue(String promptAlertValue) {
+
         this.promptAlertValue = promptAlertValue;
     }
 
@@ -28,7 +30,7 @@ public class AlertObject {
                     setPromptAlertValue(testData.get(Key));  // se populeaza cu valoarea cheii respective
                     break;
 
-            }
+                                }
         }
     }
 }
